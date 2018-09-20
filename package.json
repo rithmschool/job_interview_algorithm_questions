@@ -1,0 +1,11 @@
+{
+  "name": "job_interview_algorithm_questions",
+  "version": "1.0.0",
+  "description": "Algorithm practice for Rithm students in the job search",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
