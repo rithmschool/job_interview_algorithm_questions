@@ -20,6 +20,8 @@ Want to contribute to this repository? Great!
   2. The folder name should be `kebab-case`, and should be named by the problem area first, rather than the specific problem (e.g. `binary-search-tree-lowest-common-ancestor`, not `lowest-common-ancestory-binary-search-tree`).
   3. If there is code that you anticipate being required across multiple different challenges (e.g. the starter classes for binary search trees), you can put that code inside of the `_starters` directory.
 
+Also, please note that not every problem you get asked will necessarily make for a good problem here. Sometimes you'll just be asked a ridiculously hard problem that involves data structures or problem solving strategies you knew nothing about. The goal here is to include problems that you think most of your classmates could solve, or will stretch their abilities in a satisfying way. If the problem is deemed too difficult, we may reject your PR. When in doubt, consult with an instructor before adding a problem!
+
 ## Running the tests
 
 To run the tests, make sure you have `jest` installed globally. You can run the tests for every problem by typing
