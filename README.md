@@ -10,6 +10,8 @@ Each problem in this repository has its own folder. Inside of the problem folder
 
 Want to contribute to this repository? Great! 
 
+**If you get asked one of these questions on an interview**, please submit a PR to that problem's README adding the company name!
+
 **For bug / typo fixes**, just submit a PR with the error you've found.
 
 **For additional unit tests**, submit a PR with a note on why you think the extra unit tests are necessary.
@@ -17,8 +19,9 @@ Want to contribute to this repository? Great!
 **For adding a new problem**, make sure you stick to the structure outlined here. In particular:
 
   1. The problem should have its own folder, consisting of an `index.js`, `index.test.js`, `solution.js`, and `README.md`. 
-  2. The folder name should be `kebab-case`, and should be named by the problem area first, rather than the specific problem (e.g. `binary-search-tree-lowest-common-ancestor`, not `lowest-common-ancestory-binary-search-tree`).
-  3. If there is code that you anticipate being required across multiple different challenges (e.g. the starter classes for binary search trees), you can put that code inside of the `_starters` directory.
+  2. In the problem `README`, include a blank list of companies that have asked your question.
+  3. The folder name should be `kebab-case`, and should be named by the problem area first, rather than the specific problem (e.g. `binary-search-tree-lowest-common-ancestor`, not `lowest-common-ancestory-binary-search-tree`).
+  4. If there is code that you anticipate being required across multiple different challenges (e.g. the starter classes for binary search trees), you can put that code inside of the `_starters` directory.
 
 Also, please note that not every problem you get asked will necessarily make for a good problem here. Sometimes you'll just be asked a ridiculously hard problem that involves data structures or problem solving strategies you knew nothing about. The goal here is to include problems that you think most of your classmates could solve, or will stretch their abilities in a satisfying way. If the problem is deemed too difficult, we may reject your PR. When in doubt, consult with an instructor before adding a problem!
 
