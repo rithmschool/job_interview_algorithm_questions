@@ -6,7 +6,7 @@ class SinglyLinkedList {
   }
 
   push(val) {
-    let newNode = new Node(val);
+    let newNode = new SLLNode(val);
     if (!this.head) {
       this.head = newNode;
     } else {
@@ -43,7 +43,7 @@ class SinglyLinkedList {
   }
 }
 
-class Node {
+class SLLNode {
   constructor(val, next = null) {
     this.val = val,
       this.next = next;
