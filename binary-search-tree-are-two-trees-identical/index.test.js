@@ -1,10 +1,12 @@
-const { areIdentical } = require("./");
-const { BinarySearchTree } = require("../_starters/binary-search-tree");
+const {
+  BinarySearchTree
+} = require("./");
 
 describe("areIdentical BinarySearchTree", () => {
   let firstBST = new BinarySearchTree();
   let secondBST = new BinarySearchTree();
   let thirdBST = new BinarySearchTree();
+  let fourthBST = new BinarySearchTree();
 
   firstBST.insert(20);
   firstBST.insert(10);
@@ -31,17 +33,30 @@ describe("areIdentical BinarySearchTree", () => {
   thirdBST.insert(2);
   thirdBST.insert(18);
 
+  fourthBST.insert(10);
+  fourthBST.insert(30);
+  fourthBST.insert(20);
+  fourthBST.insert(22);
+  fourthBST.insert(8);
+  fourthBST.insert(25);
+  fourthBST.insert(15);
+
+
   it("Returns a boolean", () => {
-    expect(typeof(areIdentical(firstBST.root, secondBST.root))).toBe('boolean');
-    expect(typeof(areIdentical(secondBST.root, thirdBST.root))).toBe('boolean');
-    expect(typeof(areIdentical(firstBST.root, thirdBST.root))).toBe('boolean');
+    expect(typeof (BinarySearchTree.areIdentical(firstBST.root, secondBST.root))).toBe('boolean');
+    expect(typeof (BinarySearchTree.areIdentical(secondBST.root, thirdBST.root))).toBe('boolean');
+    expect(typeof (BinarySearchTree.areIdentical(firstBST.root, thirdBST.root))).toBe('boolean');
   })
 
-  it("Returns true when both trees are identical", () => {
-    expect(areIdentical(firstBST.root, secondBST.root)).toBe(true);
+  it("Returns true when both trees have the same values in the same order", () => {
+    expect(BinarySearchTree.areIdentical(firstBST.root, secondBST.root)).toBe(true);
   })
 
-  it("Returns false when both trees are not identical", () => {
-    expect(areIdentical(firstBST.root, thirdBST.root)).toBe(false);
+  it("Returns false when the two trees have different values", () => {
+    expect(BinarySearchTree.areIdentical(firstBST.root, thirdBST.root)).toBe(false);
+  })
+
+  it("Returns false when two trees have same values but different order", () => {
+    expect(BinarySearchTree.areIdentical(firstBST.root, fourthBST.root)).toBe(false);
   })
 })

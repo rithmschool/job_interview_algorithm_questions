@@ -1,6 +1,10 @@
-const { BinarySearchTree } = require("./");
-const { BSTNode } = require("../_starters/binary-search-tree");
+const {
+  BinarySearchTree
+} = require("./");
 
+const {
+  BSTNode
+} = require("../_starters/binary-search-tree");
 
 describe("isValid BinarySearchTree", () => {
   let node3 = new BSTNode(3);
@@ -11,7 +15,7 @@ describe("isValid BinarySearchTree", () => {
   let node18 = new BSTNode(18);
   let node23 = new BSTNode(23);
 
-//example of a valid Binary Search Tree;
+  //example of a valid Binary Search Tree;
   let validBST = new BinarySearchTree();
   validBST.insert(20);
   validBST.insert(10);
@@ -21,20 +25,16 @@ describe("isValid BinarySearchTree", () => {
   validBST.insert(25);
   validBST.insert(22);
 
+  //example of an invalid Binary Search Tree;
+  let invalidBST = new BinarySearchTree();
+  invalidBST.root = node20;
+  invalidBST.root.left = node25;
+  invalidBST.root.right = node18;
+  invalidBST.root.left.left = node10;
+  invalidBST.root.right.left = node8;
+  invalidBST.root.left.right = node3;
 
-
-
-//example of an invalid Binary Search Tree;
-  let inValidBST = new BinarySearchTree();
-  inValidBST.root = node20;
-  inValidBST.root.left = node25;
-  inValidBST.root.right = node18;
-  inValidBST.root.left.left = node10;
-  inValidBST.root.right.left = node8;
-  inValidBST.root.left.right = node3;
-
-
-//example of another invalid Binary Search Tree;
+  //example of another invalid Binary Search Tree;
   let anotherInvalidBST = new BinarySearchTree();
   anotherInvalidBST.root = node20;
   anotherInvalidBST.root.left = node8;
@@ -44,18 +44,17 @@ describe("isValid BinarySearchTree", () => {
   anotherInvalidBST.root.left.right = node3;
 
   it("Returns a boolean", () => {
-    expect(typeof(validBST.isValid(validBST.root))).toBe('boolean');
-    expect(typeof(inValidBST.isValid(inValidBST.root))).toBe('boolean');
+    expect(typeof (validBST.isValid())).toBe('boolean');
+    expect(typeof (invalidBST.isValid())).toBe('boolean');
   })
 
   it("Returns true when BST is valid", () => {
-    console.log(validBST);
-    expect(validBST.isValid(validBST.root)).toBe(true);
+    expect(validBST.isValid()).toBe(true);
 
   })
 
   it("Returns false when BST is invalid", () => {
-    expect(inValidBST.isValid(inValidBST.root)).toBe(false);
-    expect(anotherInvalidBST.isValid(anotherInvalidBST.root)).toBe(false);
+    expect(invalidBST.isValid()).toBe(false);
+    expect(anotherInvalidBST.isValid()).toBe(false);
   })
 });

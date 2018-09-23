@@ -18,9 +18,13 @@ BinarySearchTree.areIdentical(rootOne, rootTwo);
 //True
 ```
 
-![Binary Search Tree -areIdentical](../_images/not-identical-bst.png)
+![Binary Search Tree -areIdentical](../_images/bst-not-identical-one.png)
 
-For the tree above:
+![Binary Search Tree -areIdentical](../_images/bst-not-identical-two.png)
+
+For the two trees above:
+
+- Although both trees have the same values, they are not structurally identical.
 
 ```js
 BinarySearchTree.areIdentical(rootOne, rootTwo);

@@ -1,3 +1,10 @@
+class SLLNode {
+  constructor(val, next = null) {
+    this.val = val,
+      this.next = next;
+  }
+}
+
 class SinglyLinkedList {
   constructor(head = null, tail = null, length = 0) {
     this.head = head,
@@ -40,12 +47,5 @@ class SinglyLinkedList {
         current = current.next;
       }
     }
-  }
-}
-
-class SLLNode {
-  constructor(val, next = null) {
-    this.val = val,
-      this.next = next;
   }
 }

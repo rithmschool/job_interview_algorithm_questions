@@ -4,8 +4,8 @@ const {
 } = require("../_starters/binary-search-tree");
 
 
-BinarySearchTree.prototype.areIdentical = function () {
-  //Please add any parameters you deem necessary.
+BinarySearchTree.prototype.areIdentical = function (rootOne, rootTwo) {
+
 }
 module.exports = {
   BinarySearchTree

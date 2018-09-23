@@ -1,9 +1,10 @@
-const { BinarySearchTree, BSTNode } = require("../_starters/binary-search-tree");
+const {
+  BinarySearchTree,
+  BSTNode
+} = require("../_starters/binary-search-tree");
 
+BinarySearchTree.prototype.isValid = function (current = this.root) {};
 
-BinarySearchTree.prototype.isValid = function() {
-  //Please add any arguments you deem necessary.
+module.exports = {
+  BinarySearchTree
 };
-
-
-module.exports = { BinarySearchTree };

@@ -1,16 +1,20 @@
-BinarySearchTree.prototype.isValid = function(root,max=null,min=null) {
-  if(root === null) {
+const {
+  BinarySearchTree
+} = require('../_starters/binary-search-tree')
+
+BinarySearchTree.prototype.isValid = function (current = this.root, min = null, max = null) {
+  if (current === null) {
     return true;
   }
-  if(max === null && min !== null) {
-    if(root.val < min) {
-      return false;
-    }
+  let nodeTooSmall = current.val < min;
+  let nodeTooLarge = max !== null ? current.val > max : false;
+
+  if (nodeTooSmall || nodeTooLarge) {
+    return false;
   }
-  if(max !== null && min === null) {
-    if(root.val > max) {
-      return false;
-    }
-  }
-  return this.isValid(root.left, max = root.val, min = null) && this.isValid(root.right, max = null, min = root.val);
+  return (this.isValid(current.left, min = null, max = current.val) && this.isValid(current.right, min = current.val, max = null))
 };
+
+module.exports = {
+  BinarySearchTree
+}
