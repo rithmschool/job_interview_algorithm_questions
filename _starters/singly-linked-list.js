@@ -1,59 +1,51 @@
 class SinglyLinkedList {
-  constructor(head = null, tail = null, length =0) {
+  constructor(head = null, tail = null, length = 0) {
     this.head = head,
-    this.tail = tail,
-    this.length = length;
+      this.tail = tail,
+      this.length = length;
   }
 
   push(val) {
     let newNode = new Node(val);
     if (!this.head) {
       this.head = newNode;
-      this.tail = this.head;
-    }else {
+    } else {
       this.tail.next = newNode;
-      this.tail = newNode;
     }
-    this.length ++;
+    this.length++;
+    this.tail = newNode;
     return this;
   }
 
   pop() {
-    let c = this.head;
+    let current = this.head;
     let poppedElement = null;
-    if(this.length === 0){
+    if (this.length === 0) {
       return undefined;
-    }else if(this.length === 1){
-        poppedElement = c;
-        this.head = null;
-        this.tail = null
-        this.length--
-        return poppedElement;
-    }else{
-      while(c.next !== null){
-        if(c.next.next === null){
-          poppedElement = c.next;
+    } else if (this.length === 1) {
+      poppedElement = current;
+      this.head = null;
+      this.tail = null
+      this.length--
+      return poppedElement;
+    } else {
+      while (current.next !== null) {
+        if (current.next.next === null) {
+          poppedElement = current.next;
           this.tail = c;
-          c.next = null;
-          this.length --;
+          current.next = null;
+          this.length--;
           return poppedElement
-          }
-            c = c.next;
-          }
         }
+        current = current.next;
       }
+    }
   }
+}
 
 class Node {
   constructor(val, next = null) {
     this.val = val,
-    this.next = next;
+      this.next = next;
   }
 }
-
-
-
-
-
-
-
