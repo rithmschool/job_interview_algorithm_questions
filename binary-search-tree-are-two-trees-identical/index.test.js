@@ -43,7 +43,6 @@ describe("areIdentical BinarySearchTree", () => {
 
 
   it("Returns a boolean", () => {
-    console.log(BinarySearchTree.prototype.areIdentical)
     expect(typeof (firstBST.areIdentical(firstBST.root, secondBST.root))).toBe('boolean');
     expect(typeof (secondBST.areIdentical(secondBST.root, thirdBST.root))).toBe('boolean');
     expect(typeof (firstBST.areIdentical(firstBST.root, thirdBST.root))).toBe('boolean');
