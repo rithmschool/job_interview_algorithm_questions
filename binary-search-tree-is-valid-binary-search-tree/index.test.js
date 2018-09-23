@@ -1,6 +1,6 @@
 const {
   BinarySearchTree
-} = require("./solution");
+} = require("./");
 
 const {
   BSTNode
