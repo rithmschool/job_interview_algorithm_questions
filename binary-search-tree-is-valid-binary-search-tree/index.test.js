@@ -1,6 +1,6 @@
 const {
   BinarySearchTree
-} = require("./");
+} = require("./solution");
 
 const {
   BSTNode
@@ -43,6 +43,15 @@ describe("isValid BinarySearchTree", () => {
   anotherInvalidBST.root.right.left = node23;
   anotherInvalidBST.root.left.right = node3;
 
+  let bstWithDuplicates = new BinarySearchTree();
+  bstWithDuplicates.insert(20);
+  bstWithDuplicates.insert(10);
+  bstWithDuplicates.insert(10);
+  bstWithDuplicates.insert(15);
+  bstWithDuplicates.insert(15);
+  bstWithDuplicates.insert(25);
+  bstWithDuplicates.insert(22);
+
   it("Returns a boolean", () => {
     expect(typeof (validBST.isValid())).toBe('boolean');
     expect(typeof (invalidBST.isValid())).toBe('boolean');
@@ -56,5 +65,9 @@ describe("isValid BinarySearchTree", () => {
   it("Returns false when BST is invalid", () => {
     expect(invalidBST.isValid()).toBe(false);
     expect(anotherInvalidBST.isValid()).toBe(false);
+  })
+
+  it("Returns true when bst has duplicates", () => {
+    expect(bstWithDuplicates.isValid()).toBe(true);
   })
 });
