@@ -1,14 +1,19 @@
-BinarySearchTree.prototype.areIdentical = function (root1, root2) {
-  if (!root1 && !root2) {
+const {
+  BinarySearchTree
+} = require('../_starters/binary-search-tree')
+
+BinarySearchTree.prototype.areIdentical = function (rootOne, rootTwo) {
+  if (rootOne === null && rootTwo === null) {
     return true;
   }
+  if (rootOne && rootTwo) {
+    if (rootOne.val === rootTwo.val) {
+      let left = this.areIdentical(rootOne.left, rootTwo.left);
+      let right = this.areIdentical(rootOne.right, rootTwo.right);
+      return left && right
+    }
 
-  if (root1 && root2) {
-    return (root1.val === root2.val &&
-      BinarySearchTree.areIdentical(root1.left, root2.left) &&
-      BinarySearchTree.areIdentical(root1.right, root2.right));
   }
-
   return false;
 }
 
