@@ -19,4 +19,4 @@ BinarySearchTree.prototype.areIdentical = function (rootOne, rootTwo) {
 
 module.exports = {
   BinarySearchTree
-};
+}
