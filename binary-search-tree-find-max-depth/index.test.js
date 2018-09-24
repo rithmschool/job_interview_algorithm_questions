@@ -2,7 +2,7 @@ const { BinarySearchTree } = require("./");
 
 describe("BinarySearchTree#MaxDepth", () => {
   let bst = new BinarySearchTree()
-  let currentNode, lowestNode1, lowestNode2, lowestNode3, secondNode1, secondNode2
+  let bst = new BinarySearchTree()
 
   beforeAll(() => {
     let nodeValues = [41,20,65,11,29,9,12,25,32,3,10,31,36,50,91,72,99]
