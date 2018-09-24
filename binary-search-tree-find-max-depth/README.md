@@ -7,5 +7,9 @@ You have been provided with a `BinarySearchTree` class, as well as a `BSTNode` c
 Notes:
   - You can assume all values are unique
 
+Example: 
+
+![Binary Search Tree - Least Common Ancestor](../_images/MaxDepthBST.png)
+
 Companies that have asked this question:
 
