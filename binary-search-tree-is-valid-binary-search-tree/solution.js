@@ -13,7 +13,10 @@ BinarySearchTree.prototype.isValid = function (current = this.root, min = null, 
   if (nodeTooSmall || nodeTooLarge) {
     return false;
   }
-  return (this.isValid(current.left, min = null, max = current.val) && this.isValid(current.right, min = current.val, max = null))
+  let checkLeft = this.isValid(current.left, min = null, max = current.val);
+  let checkRight = this.isValid(current.right, min = current.val, max = null);
+
+  return checkLeft && checkRight;
 };
 
 module.exports = {

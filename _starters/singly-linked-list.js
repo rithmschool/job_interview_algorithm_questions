@@ -1,15 +1,15 @@
 class SLLNode {
   constructor(val, next = null) {
-    this.val = val,
-      this.next = next;
+    this.val = val;
+    this.next = next;
   }
 }
 
 class SinglyLinkedList {
   constructor(head = null, tail = null, length = 0) {
-    this.head = head,
-      this.tail = tail,
-      this.length = length;
+    this.head = head;
+    this.tail = tail;
+    this.length = length;
   }
 
   push(val) {
@@ -32,8 +32,8 @@ class SinglyLinkedList {
     } else if (this.length === 1) {
       poppedElement = current;
       this.head = null;
-      this.tail = null
-      this.length--
+      this.tail = null;
+      this.length--;
       return poppedElement;
     } else {
       while (current.next !== null) {

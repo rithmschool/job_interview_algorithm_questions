@@ -43,20 +43,20 @@ describe("areIdentical BinarySearchTree", () => {
 
 
   it("Returns a boolean", () => {
-    expect(typeof (firstBST.areIdentical(firstBST.root, secondBST.root))).toBe('boolean');
-    expect(typeof (secondBST.areIdentical(secondBST.root, thirdBST.root))).toBe('boolean');
-    expect(typeof (firstBST.areIdentical(firstBST.root, thirdBST.root))).toBe('boolean');
+    expect(typeof (BinarySearchTree.areIdentical(firstBST.root, secondBST.root))).toBe('boolean');
+    expect(typeof (BinarySearchTree.areIdentical(secondBST.root, thirdBST.root))).toBe('boolean');
+    expect(typeof (BinarySearchTree.areIdentical(firstBST.root, thirdBST.root))).toBe('boolean');
   })
 
   it("Returns true when both trees have the same values in the same order", () => {
-    expect(firstBST.areIdentical(firstBST.root, secondBST.root)).toBe(true);
+    expect(BinarySearchTree.areIdentical(firstBST.root, secondBST.root)).toBe(true);
   })
 
   it("Returns false when the two trees have different values", () => {
-    expect(firstBST.areIdentical(firstBST.root, thirdBST.root)).toBe(false);
+    expect(BinarySearchTree.areIdentical(firstBST.root, thirdBST.root)).toBe(false);
   })
 
   it("Returns false when two trees have same values but different order", () => {
-    expect(firstBST.areIdentical(firstBST.root, fourthBST.root)).toBe(false);
+    expect(BinarySearchTree.areIdentical(firstBST.root, fourthBST.root)).toBe(false);
   })
 })
