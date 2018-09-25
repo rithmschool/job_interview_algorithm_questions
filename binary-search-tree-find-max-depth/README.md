@@ -23,7 +23,7 @@ let nodeValues = [41, 20, 65, 11, 29, 9, 12, 25, 32, 3, 10, 31, 36, 50, 91, 72, 
 let nodeValues2 = [10,2,9]
 
 nodeValues.forEach(val => bst.insert(val));
-nodesValues3.forEach(val => bst.inert(val));
+nodesValues3.forEach(val => bst2.insert(val));
 
 best.maxDept(); // should return 5
 best2.maxDepth(); // should return 2
