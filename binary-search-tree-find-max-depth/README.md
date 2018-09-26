@@ -12,21 +12,32 @@ Notes:
 
 - You can assume all values are unique
 
-Example:
+Example 1:
 
-![Binary Search Tree - Least Common Ancestor](../_images/MaxDepthBST.png)
+![Binary Search Tree - MaxDepth](../_images/MaxDepthBST.png)
 
 ```js
 let bst = new BinarySearchTree();
-let bst2 = new BinarySearchTree();
 let nodeValues = [41, 20, 65, 11, 29, 9, 12, 25, 32, 3, 10, 31, 36, 50, 91, 72, 99];
-let nodeValues2 = [10,2,9]
 
 nodeValues.forEach(val => bst.insert(val));
-nodesValues3.forEach(val => bst2.insert(val));
 
-best.maxDept(); // should return 5
-best2.maxDepth(); // should return 2
+bst.maxDepth(); // should return 5
 ```
+
+Example 2:
+
+![Binary Search Tree - MaxDepth Example 2](../_images/MaxDepthBST2.png)
+```js
+let bst = new BinarySearchTree();
+let nodeValues = [55, 45, 65, 60, 70];
+
+nodeValues.forEach(val => bst.insert(val));
+
+bst.maxDepth(); // should return 3
+```
+If you would like a guided walkthrough to this problem, the following video is an excellent resource.
+
+[Binary Search Tree Max Depth](https://www.youtube.com/watch?v=YT1994beXn0)
 
 Companies that have asked this question:
