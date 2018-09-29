@@ -6,8 +6,8 @@ const {
 /**
  * @param {BSTNode}
  */
-BinarySearchTree.prototype.dfsPostOrder = function(current = this.root) {
-  
+BinarySearchTree.prototype.dfsPostOrder = function(current = this.root, order = []) {
+
 };
 
 module.exports = {
