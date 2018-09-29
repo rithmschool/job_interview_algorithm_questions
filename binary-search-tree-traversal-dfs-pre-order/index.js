@@ -5,8 +5,9 @@ const {
 
 /**
  * @param {BSTNode}
+ * @param {order} is an array
  */
-BinarySearchTree.prototype.dfsPreOrder = function(current = this.root) {
+BinarySearchTree.prototype.dfsPreOrder = function(current = this.root, order = []) {
   
 };
 
