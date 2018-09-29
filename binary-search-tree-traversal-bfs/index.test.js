@@ -22,9 +22,9 @@ describe("BinarySearchTree#BFS", () => {
     expect(Array.isArray(bstThree.bfs())).toBe(true);
   });
 
-  it("should return an array in the following orders", () => {
+  it("should return an array with the following order", () => {
     expect(bstOne.bfs()).toEqual(expect.arrayContaining([ 50, 45, 65, 35, 47, 60, 75, 25, 37, 85, 20, 27 ]));
-    expect(bstTwo.bfs()).toEqual(expect.arrayContaining([ 41, 20, 65, 11, 29, 50, 91, 72, 99, 100 ]))
+    expect(bstTwo.bfs()).toEqual(expect.arrayContaining([ 41, 20, 65, 11, 29, 50, 91, 72, 99, 100 ]));
     expect(bstThree.bfs()).toEqual(expect.arrayContaining([]));
   });
 
