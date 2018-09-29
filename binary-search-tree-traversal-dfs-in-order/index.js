@@ -5,9 +5,10 @@ const {
 
 /**
  * @param {BSTNode}
+ * @param {order} is an array
  */
-BinarySearchTree.prototype.dfsInOrder = function(current = this.root) {
-  
+BinarySearchTree.prototype.dfsInOrder = function (current = this.root, order = []) {
+
 };
 
 module.exports = {
