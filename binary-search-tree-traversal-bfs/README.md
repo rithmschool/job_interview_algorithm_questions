@@ -39,7 +39,7 @@ bst.bfs(); // [ 41, 20, 65, 11, 29, 50, 91, 72, 99, 100 ]
 
 Additional Resources To Read:
 
-[Medium BFS](https://medium.com/basecs/breaking-down-breadth-first-search-cebe696709d9) - NOTE: HAS A SOLUTION ON THE BOTTOM
+[Medium BFS](https://medium.com/basecs/breaking-down-breadth-first-search-cebe696709d9) - NOTE: HAS A SOLUTION ON THE BOTTOM <br/>
 [Rithm School](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/binary-search-trees-traversal)
 
 Companies that have asked this question:

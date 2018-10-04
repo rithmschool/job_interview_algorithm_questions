@@ -6,7 +6,7 @@ Definition Depth First Search:
 
 **Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. - [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**DFS In Order** In case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order. To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal s reversed can be used. - [geeksforgeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+**DFS In Order** In case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order. To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal is reversed can be used. - [geeksforgeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)<br/>
 
 ![Binary Search Tree - DFS In Order](../_images/bst-in-order.svg.png)
 In-order: A, B, C, D, E, F, G, H, I
@@ -43,6 +43,6 @@ bst.dfsInOrder(); // [11, 20, 29, 41, 50, 65, 72, 91, 99]
 Additional Resources To Read:
 
 [Medium DFS](https://medium.com/basecs/demystifying-depth-first-search-a7c14cccf056) - NOTE: HAS A SOLUTION ON THE BOTTOM
-[Rithm School](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/binary-search-trees-traversal)
+[Rithm School]<br/>(https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/binary-search-trees-traversal)
 
 Companies that have asked this question:

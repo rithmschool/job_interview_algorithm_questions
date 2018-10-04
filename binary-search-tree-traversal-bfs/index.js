@@ -4,7 +4,8 @@ const {
 } = require("../_starters/binary-search-tree");
 
 /**
- * @param {BSTNode}
+ * @param {BSTNode} [current = this.root]
+ * @return {Array} 
  */
 BinarySearchTree.prototype.bfs = function(current = this.root) {
 

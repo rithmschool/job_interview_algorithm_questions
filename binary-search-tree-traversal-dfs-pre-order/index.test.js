@@ -16,7 +16,6 @@ describe("BinarySearchTree#DFSPreOrder", () => {
 
     let newNodebstFour = [20, 10, 40, 8, 15, 30, 50, 6, 9, 16, 25, 32, 3, 22, 29];
     newNodebstFour.forEach(val => bstFour.insert(val));
-    
   });
 
   it("should return an array", () => {
@@ -26,10 +25,10 @@ describe("BinarySearchTree#DFSPreOrder", () => {
   });
 
   it("should return an array with the following order", () => {
-    expect(bstOne.dfsPreOrder()).toEqual(expect.arrayContaining([20, 25, 27, 35, 37, 45, 47, 50, 60, 65, 75, 85]));
-    expect(bstTwo.dfsPreOrder()).toEqual(expect.arrayContaining([11, 20, 29, 41, 50, 65, 72, 91, 99, 100]));
-    expect(bstThree.dfsPreOrder()).toEqual(expect.arrayContaining([]));
-    expect(bstFour.dfsPreOrder()).toEqual(expect.arrayContaining([3, 6, 8, 9, 10, 15, 16, 20, 22, 25, 29, 30, 32, 40, 50]));
+    expect(bstOne.dfsPreOrder()).toEqual([50, 45, 35, 25, 20, 27, 37, 47, 65, 60, 75, 85]);
+    expect(bstTwo.dfsPreOrder()).toEqual([41, 20, 11, 29, 65, 50, 91, 72, 99, 100]);
+    expect(bstThree.dfsPreOrder()).toEqual([]);
+    expect(bstFour.dfsPreOrder()).toEqual([20, 10, 8, 6, 3, 9, 15, 16, 40, 30, 25, 22, 29, 32, 50]);
   });
 
 });

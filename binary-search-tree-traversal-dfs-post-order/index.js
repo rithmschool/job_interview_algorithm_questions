@@ -4,7 +4,9 @@ const {
 } = require("../_starters/binary-search-tree");
 
 /**
- * @param {BSTNode}
+ * @param {BSTNode} [current = this.root]
+ * @param {Array} [order = []]
+ * @returns {Array}
  */
 BinarySearchTree.prototype.dfsPostOrder = function(current = this.root, order = []) {
 

@@ -6,7 +6,7 @@ Definition Depth First Search:
 
 **Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. - [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**DFS Pre Order** Preorder traversal is used to create a copy of the tree. Preorder traversal is also used to get prefix expression on of an expression tree. - [geeksforgeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+**DFS Pre Order** In this traversal method, the root node is visited first, then the left subtree and finally the right subtree. - [geeksforgeeks](https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm)<br/>
 
 ![Binary Search Tree - DFS pre Order](../_images/bst-preorder.svg.png)
 Post-order: F, B, A, D, C, E, G, I, H
@@ -26,7 +26,7 @@ let newNodes = [50, 45, 65, 35, 25, 20, 75, 60, 85, 47, 37, 27];
 
 newNodes.forEach(val => bst.insert(val));
 
-bst.dfsPreOrder(); // [20, 25, 27, 35, 37, 45, 47, 50, 60, 65, 75, 85]
+bst.dfsPreOrder(); // [50, 45, 35, 25, 20, 27, 37, 47, 65, 60, 75, 85]
 ```
 
 Example 2:
@@ -37,12 +37,12 @@ let newNodes = [41, 20, 65, 29, 11, 91, 50, 99, 72];
 
 newNodes.forEach(val => bst.insert(val));
 
-bst.dfsPreOrder(); // [11, 20, 29, 41, 50, 65, 72, 91, 99]
+bst.dfsPreOrder(); // [41, 20, 11, 29, 65, 50, 91, 72, 99]
 ```
 
 Additional Resources To Read:
 
 [Medium DFS](https://medium.com/basecs/demystifying-depth-first-search-a7c14cccf056) - NOTE: HAS A SOLUTION ON THE BOTTOM
-[Rithm School](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/binary-search-trees-traversal)
+[Rithm School]<br/>(https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/binary-search-trees-traversal)
 
 Companies that have asked this question:

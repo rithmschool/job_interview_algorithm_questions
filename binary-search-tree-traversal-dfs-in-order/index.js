@@ -4,10 +4,11 @@ const {
 } = require("../_starters/binary-search-tree");
 
 /**
- * @param {BSTNode}
- * @param {order} is an array
+ * @param {BSTNode} [current = this.root]
+ * @param {Array} [order = []]
+ * @returns {Array}
  */
-BinarySearchTree.prototype.dfsInOrder = function (current = this.root, order = []) {
+BinarySearchTree.prototype.dfsInOrder = function(current = this.root, order = []) {
 
 };
 

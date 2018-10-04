@@ -6,7 +6,7 @@ Definition Depth First Search:
 
 **Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. - [wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 
-**DFS Post Order** Postorder traversal is used to delete the tree. Please see the question for deletion of tree for details. Postorder traversal is also useful to get the postfix expression of an expression tree. - [geeksforgeeks](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+**DFS Post Order** In this traversal method, the root node is visited last, hence the name. First we traverse the left subtree, then the right subtree and finally the root node. - [tutorialspoint](https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm) <br/>
 
 ![Binary Search Tree - DFS post Order](../_images/bst-postorder.svg.png)
 Post-order: A, C, E, D, B, H, I, G, F
@@ -42,7 +42,7 @@ bst.dfsPostOrder(); // [11, 29, 20, 50, 72, 100, 99, 91, 65, 41]
 
 Additional Resources To Read:
 
-[Medium DFS](https://medium.com/basecs/demystifying-depth-first-search-a7c14cccf056) - NOTE: HAS A SOLUTION ON THE BOTTOM
+[Medium DFS](https://medium.com/basecs/demystifying-depth-first-search-a7c14cccf056) - NOTE: HAS A SOLUTION ON THE BOTTOM<br/>
 [Rithm School](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/binary-search-trees-traversal)
 
 Companies that have asked this question:
