@@ -12,7 +12,6 @@ describe("BinarySearchTree#BFS", () => {
     
     let newNodebstTwo = [41, 20, 65, 29, 11, 91, 50, 99, 72, 100];
     newNodebstTwo.forEach(val => bstTwo.insert(val));
-    
   });
 
   it("should return an array", () => {
