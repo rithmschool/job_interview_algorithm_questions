@@ -6,9 +6,39 @@ Welcome! The purpose of this repository is to give students a place to share int
 
 Each problem in this repository has its own folder. Inside of the problem folder is a README with the problem description, as well as an ongoing list of which companies have asked this problem. Each folder also consists of an `index.js` file with starter code for the challenge, an `index.test.js` file with unit tests for the problem, and a `solution.js` with a solution which will pass all of the unit tests.
 
+## How to Solve
+
+If you're just interested in using this repository to get practice solving problems, we recommend you **clone** this repository. That way you can create a new repository tied to your account and point your `origin` to this new remote. As you solve problems, you can then `add`, `commit` and push them to your `origin`'s master branch (this is important for collecting green squares on your GitHub profile, since contributions on other branches won't count).
+
+Setup is straightforward:
+
+```sh
+# install dependencies
+npm i
+```
+
+To configure GitHub, first, create a new repository on your account. Then you could do the following:
+
+```sh
+# keep the link to rithmschool's original, so that you can pull down new problems
+git remote rename origin upstream
+
+# add a link to your new repo
+git remote add origin LINK_TO_YOUR_REMOTE_GOES_HERE
+
+# verify that you have two remotes: upstream and origin
+git remote -v
+```
+
+You can push your solution code to your `origin`, and you can pull from `upstream` to get access to new problems as they're added.
+
 ## How to Contribute
 
-Want to contribute to this repository? Great! 
+Want to contribute to this repository? Great! In this case, we recommend creating a **fork** of the repository to add your new problem. This should be separate from your local copy where you're solving problems, since when you submit a PR, you don't want your new problem to have a bunch of your solution code come along with it.
+
+In this case, if you don't have a fork, create one. Clone your fork, make your changes, push up to your fork, and create a pull request.
+
+Common reasons why you'd want to submit a PR include, but are not limited to:
 
 **If you get asked one of these questions on an interview**, please submit a PR to that problem's README adding the company name!
 
@@ -27,13 +57,11 @@ Also, please note that not every problem you get asked will necessarily make for
 
 ## Running the tests
 
-To run the tests, make sure you have `jest` installed globally. You can run the tests for every problem by typing
-
 ```sh
 npm test
 ```
 
-in your terminal. To run the tests for a single problem, just pass the folder name to this command, e.g.
+To run the tests for a single problem, just pass the folder name to this command, e.g.
 
 ```sh
 npm test binary-search-tree-lowest-common-ancestor
