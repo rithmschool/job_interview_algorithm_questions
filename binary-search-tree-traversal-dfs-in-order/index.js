@@ -1,7 +1,4 @@
-const {
-  BinarySearchTree,
-  BSTNode
-} = require("../_starters/binary-search-tree");
+const { BinarySearchTree } = require('../_starters/binary-search-tree');
 
 /**
  * @param {BSTNode} [current = this.root]
