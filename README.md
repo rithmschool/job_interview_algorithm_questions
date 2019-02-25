@@ -66,3 +66,7 @@ To run the tests for a single problem, just pass the folder name to this command
 ```sh
 npm test binary-search-tree-lowest-common-ancestor
 ```
+
+## Pre-commit hooks
+
+The project uses `husky` and `lint-staged` to format your code and run it through ESLint when you try to commit it. If any errors are thrown, you may be asked to fix them before you can successfully commit.
