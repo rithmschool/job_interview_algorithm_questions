@@ -12,7 +12,7 @@ class BinarySearchTree {
   }
 
   insert(val) {
-    let newNode = new BSTNode(val);
+    const newNode = new BSTNode(val);
     if (this.root === null) {
       // if the tree is empty, add a root node
       this.root = newNode;
@@ -21,7 +21,7 @@ class BinarySearchTree {
     let current = this.root;
     while (true) {
       // figure out whether we should move left or right
-      let direction = val < current.val ? "left" : "right";
+      const direction = val < current.val ? 'left' : 'right';
       if (current[direction] === null) {
         // if there's a spot open, put the node there
         current[direction] = newNode;
@@ -36,7 +36,7 @@ class BinarySearchTree {
     let current = this.root;
     while (current !== null) {
       if (current.val === val) return current;
-      else if (val < current.val) current = current.left;
+      if (val < current.val) current = current.left;
       else current = current.right;
     }
     return current;

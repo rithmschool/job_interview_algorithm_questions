@@ -13,13 +13,13 @@ class SinglyLinkedList {
   }
 
   push(val) {
-    let newNode = new SLLNode(val);
+    const newNode = new SLLNode(val);
     if (!this.head) {
       this.head = newNode;
     } else {
       this.tail.next = newNode;
     }
-    this.length++;
+    this.length += 1;
     this.tail = newNode;
     return this;
   }
@@ -27,25 +27,26 @@ class SinglyLinkedList {
   pop() {
     let current = this.head;
     let poppedElement = null;
-    if (this.length === 0) {
-      return undefined;
-    } else if (this.length === 1) {
+    if (this.length === 0) return undefined;
+    if (this.length === 1) {
       poppedElement = current;
       this.head = null;
       this.tail = null;
-      this.length--;
+      this.length -= 1;
       return poppedElement;
-    } else {
-      while (current.next !== null) {
-        if (current.next.next === null) {
-          poppedElement = current.next;
-          this.tail = c;
-          current.next = null;
-          this.length--;
-          return poppedElement
-        }
-        current = current.next;
-      }
     }
+    while (current.next !== null) {
+      if (current.next.next === null) {
+        poppedElement = current.next;
+        this.tail = current;
+        current.next = null;
+        this.length -= 1;
+        return poppedElement;
+      }
+      current = current.next;
+    }
+    return undefined;
   }
 }
+
+module.exports = { SLLNode, SinglyLinkedList };

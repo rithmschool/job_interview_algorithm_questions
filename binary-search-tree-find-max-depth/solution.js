@@ -1,13 +1,13 @@
-const {BinarySearchTree, BSTNode} = require("../_starters/binary-search-tree");
+const { BinarySearchTree } = require('../_starters/binary-search-tree');
 
 /**
  * @param {BSTNode} [current=this.root]
  * @return {number}
  */
-BinarySearchTree.prototype.maxDepth = function(current = this.root) {
+BinarySearchTree.prototype.maxDepth = function maxDepth(current = this.root) {
   if (current === null) return 0;
-  let left = this.maxDepth(current.left);
-  let right = this.maxDepth(current.right);
+  const left = this.maxDepth(current.left);
+  const right = this.maxDepth(current.right);
   return Math.max(left, right) + 1;
 };
 

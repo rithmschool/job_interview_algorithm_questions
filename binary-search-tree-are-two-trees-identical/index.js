@@ -1,7 +1,4 @@
-const {
-  BinarySearchTree,
-  BSTNode
-} = require("../_starters/binary-search-tree");
+const { BinarySearchTree } = require('../_starters/binary-search-tree');
 
 /**
  * @param {BSTNode} rootOne
@@ -9,9 +6,7 @@ const {
  * @return {boolean}
  */
 
-BinarySearchTree.areIdentical = function (rootOne, rootTwo) {
-
-}
+BinarySearchTree.areIdentical = function areIdentical(rootOne, rootTwo) {};
 
 module.exports = {
   BinarySearchTree

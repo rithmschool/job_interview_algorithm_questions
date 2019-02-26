@@ -5,6 +5,6 @@ const { BinarySearchTree } = require('../_starters/binary-search-tree');
  * @param {BSTNode} node2
  * @return {BSTNode}
  */
-BinarySearchTree.prototype.lowestCommonAncestor = function(node1, node2) {};
+BinarySearchTree.prototype.lowestCommonAncestor = function lowestCommonAncestor(node1, node2) {};
 
 module.exports = { BinarySearchTree };

@@ -3,7 +3,8 @@
   "plugins": ["prettier", "jest"],
   "rules": {
     "prettier/prettier": ["error"],
-    "allowRequire": true
+    "allowRequire": true,
+    "consistentReturn": false
   },
   "env": {
     "jest/globals": true

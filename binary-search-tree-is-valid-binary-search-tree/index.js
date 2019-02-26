@@ -6,7 +6,11 @@ const { BinarySearchTree } = require('../_starters/binary-search-tree');
  * @param {(number|null)} [max=null]
  * @return {boolean}
  */
-BinarySearchTree.prototype.isValid = function(current = this.root, min = null, max = null) {};
+BinarySearchTree.prototype.isValid = function isValid(
+  current = this.root,
+  min = null,
+  max = null
+) {};
 
 module.exports = {
   BinarySearchTree
