@@ -1,6 +1,4 @@
-const {
-  BinarySearchTree
-} = require('../_starters/binary-search-tree')
+const { BinarySearchTree } = require('../_starters/binary-search-tree');
 
 /**
  * @param {BSTNode} [current=this.root]
@@ -8,23 +6,23 @@ const {
  * @param {(number|null)} [max=null]
  * @return {boolean}
  */
-BinarySearchTree.prototype.isValid = function (current = this.root, min = null, max = null) {
+BinarySearchTree.prototype.isValid = function isValid(current = this.root, min = null, max = null) {
   if (current === null) {
     return true;
   }
-  let nodeTooSmall = current.val < min;
-  //need to check explicitly if max is not null because (any number > null) always equates to true
-  let nodeTooLarge = max !== null ? current.val > max : false;
+  const nodeTooSmall = current.val < min;
+  // need to check explicitly if max is not null because (any number > null) always equates to true
+  const nodeTooLarge = max !== null ? current.val > max : false;
 
   if (nodeTooSmall || nodeTooLarge) {
     return false;
   }
-  let checkLeft = this.isValid(current.left, min = null, max = current.val);
-  let checkRight = this.isValid(current.right, min = current.val, max = null);
+  const checkLeft = this.isValid(current.left, null, current.val);
+  const checkRight = this.isValid(current.right, current.val, null);
 
   return checkLeft && checkRight;
 };
 
 module.exports = {
   BinarySearchTree
-}
+};

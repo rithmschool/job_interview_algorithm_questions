@@ -1,22 +1,17 @@
-const {
-  BinarySearchTree
-} = require("./");
+const { BinarySearchTree } = require('./solution');
+const { BSTNode } = require('../_starters/binary-search-tree');
 
-const {
-  BSTNode
-} = require("../_starters/binary-search-tree");
+describe('isValid BinarySearchTree', () => {
+  const node3 = new BSTNode(3);
+  const node8 = new BSTNode(8);
+  const node20 = new BSTNode(20);
+  const node10 = new BSTNode(10);
+  const node25 = new BSTNode(25);
+  const node18 = new BSTNode(18);
+  const node23 = new BSTNode(23);
 
-describe("isValid BinarySearchTree", () => {
-  let node3 = new BSTNode(3);
-  let node8 = new BSTNode(8);
-  let node20 = new BSTNode(20);
-  let node10 = new BSTNode(10);
-  let node25 = new BSTNode(25);
-  let node18 = new BSTNode(18);
-  let node23 = new BSTNode(23);
-
-  //example of a valid Binary Search Tree;
-  let validBST = new BinarySearchTree();
+  // example of a valid Binary Search Tree;
+  const validBST = new BinarySearchTree();
   validBST.insert(20);
   validBST.insert(10);
   validBST.insert(30);
@@ -25,8 +20,8 @@ describe("isValid BinarySearchTree", () => {
   validBST.insert(25);
   validBST.insert(22);
 
-  //example of an invalid Binary Search Tree;
-  let invalidBST = new BinarySearchTree();
+  // example of an invalid Binary Search Tree;
+  const invalidBST = new BinarySearchTree();
   invalidBST.root = node20;
   invalidBST.root.left = node25;
   invalidBST.root.right = node18;
@@ -34,8 +29,8 @@ describe("isValid BinarySearchTree", () => {
   invalidBST.root.right.left = node8;
   invalidBST.root.left.right = node3;
 
-  //example of another invalid Binary Search Tree;
-  let anotherInvalidBST = new BinarySearchTree();
+  // example of another invalid Binary Search Tree;
+  const anotherInvalidBST = new BinarySearchTree();
   anotherInvalidBST.root = node20;
   anotherInvalidBST.root.left = node8;
   anotherInvalidBST.root.right = node25;
@@ -43,7 +38,7 @@ describe("isValid BinarySearchTree", () => {
   anotherInvalidBST.root.right.left = node23;
   anotherInvalidBST.root.left.right = node3;
 
-  let bstWithDuplicates = new BinarySearchTree();
+  const bstWithDuplicates = new BinarySearchTree();
   bstWithDuplicates.insert(20);
   bstWithDuplicates.insert(10);
   bstWithDuplicates.insert(10);
@@ -52,22 +47,21 @@ describe("isValid BinarySearchTree", () => {
   bstWithDuplicates.insert(25);
   bstWithDuplicates.insert(22);
 
-  it("Returns a boolean", () => {
-    expect(typeof (validBST.isValid())).toBe('boolean');
-    expect(typeof (invalidBST.isValid())).toBe('boolean');
-  })
+  it('Returns a boolean', () => {
+    expect(typeof validBST.isValid()).toBe('boolean');
+    expect(typeof invalidBST.isValid()).toBe('boolean');
+  });
 
-  it("Returns true when BST is valid", () => {
+  it('Returns true when BST is valid', () => {
     expect(validBST.isValid()).toBe(true);
+  });
 
-  })
-
-  it("Returns false when BST is invalid", () => {
+  it('Returns false when BST is invalid', () => {
     expect(invalidBST.isValid()).toBe(false);
     expect(anotherInvalidBST.isValid()).toBe(false);
-  })
+  });
 
-  it("Returns true when bst has duplicates", () => {
+  it('Returns true when bst has duplicates', () => {
     expect(bstWithDuplicates.isValid()).toBe(true);
-  })
+  });
 });
